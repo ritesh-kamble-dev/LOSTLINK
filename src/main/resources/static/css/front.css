@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-background {
+  background-color: #0a74da; 
+  min-height: 100vh;      
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; 
+}
+
+.landing-container {
+  background: #fff;
+  width: 70%;
+  max-width: 1200px;
+  height: 500px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.content-left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-left h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #0a74da;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+@media (max-width: 1024px) {
+  .landing-container {
+      width: 90%;
+  }
+  
+  .content-left h1 {
+      font-size: 2rem;
+  }
+
+  .subtitle {
+      font-size: 1.2rem;
+  }
+
+  .description {
+      font-size: 0.95rem;
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+      flex-direction: column;
+      text-align: center;
+      width: 95%;
+      height: auto;
+  }
+
+  .content-left, .content-right {
+      flex: none;
+      width: 100%;
+      padding: 1.5rem;
+  }
+
+  .content-left h1 {
+      font-size: 1.8rem;
+  }
+
+  .subtitle {
+      font-size: 1.1rem;
+  }
+
+  .description {
+      font-size: 0.9rem;
+  }
+
+  .btn-group {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-left h1 {
+      font-size: 1.5rem;
+  }
+
+  .subtitle {
+      font-size: 1rem;
+  }
+
+  .description {
+      font-size: 0.85rem;
+  }
+
+  .btn {
+      width: 100%; 
+      padding: 0.65rem;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details | Lost & Found</title>
+    <link rel="stylesheet" href="./css/ItemDetail.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>LOSTLINK</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-item">Dashboard</li>
+                <li class="nav-item">Report Items</li>
+                <li class="nav-item">Search Items</li>
+                <li class="nav-item">Profile Settings</li>
+                <li class="nav-item">Help Center</li>
+                <li id="logout" class="nav-item">Log Out</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="welcome-section">
+                <p class="page-kicker">LOST &amp; FOUND</p>
+                <h1>Item Details</h1>
+                <button id="back-to-search" class="back-link" type="button">← Back to Search</button>
+            </div>
+
+            <div class="item-details">
+                <div class="item-images">
+                    <img src="./images/front1.jpg" alt="Item Image" class="main-image">
+                    <p class="image-caption">Uploaded item photo</p>
+                </div>
+                <div class="detailsContainer">
+                    <div class="item-heading">
+                        <div>
+                            <p class="eyebrow">ITEM REPORT</p>
+                            <h2 id="item-name">Item name</h2>
+                        </div>
+                        <span id="item-status" class="status-badge status-unknown">Unknown</span>
+                    </div>
+                    <div class="details-grid">
+                        <article class="detail-card detail-card-wide"><span class="detail-label">Description</span><p id="item-description" class="detail-value">No description available</p></article>
+                        <article class="detail-card"><span class="detail-label">Location</span><p id="item-location" class="detail-value">Not specified</p></article>
+                        <article class="detail-card"><span class="detail-label">Date Lost / Found</span><p id="item-date" class="detail-value">Date not recorded</p></article>
+                        <article class="detail-card detail-card-wide reporter-card"><span class="detail-label">Reported by</span><a id="reporter-link" class="reporter-link" href="#">Reporter unavailable</a></article>
+                    </div>
+                    <div class="action-row">
+                        <button id="claim-btn" class="action-btn primary-action">Claim Item</button>
+                        <button id="email-btn" class="action-btn secondary-action">Email Reporter</button>
+                    </div>
+                    <section id="claim-review" class="claim-review" hidden>
+                        <h3>Claim requests</h3>
+                        <div id="claim-requests"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "./js/script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src = "./js/itemDetail.js"></script>
+</body>
+</html>

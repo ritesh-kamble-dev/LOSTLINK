@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Lost & Found</title>
+    <link rel = "stylesheet" href = "./css/UserHome.css"></link>
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>LOSTLINK</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">Report Items</li>
+                <li class="nav-item">Search Items</li>
+                <li class="nav-item">Profile Settings</li>
+                <li class="nav-item">Help Center</li>
+                <li id="logout" class="nav-item">Log Out</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="welcome-section">
+                <h1 id="title_card">Welcome back, User</h1>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div id="lostCount" class="stat-number">0</div>
+                    <div class="stat-label">Active Lost Reports</div>
+                </div>
+                <div class="stat-card">
+                    <div id="foundCount" class="stat-number">0</div>
+                    <div class="stat-label">Found Items Reported</div>
+                </div>
+                <div class="stat-card">
+                    <div id="claimedCount" class="stat-number">0</div>
+                    <div class="stat-label">Claimed</div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h2>My Reported Items</h2>
+                <p class="section-description">Select an item to view its details and any matching requests.</p>
+                <div class="items-table-wrapper">
+                <table class="my-items-table">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Item Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                            <th>Date Reported</th>
+                            <th><span class="sr-only">Open item</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTableBody">
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "./js/script.js"></script>
+    <script src = "./js/userHome.js"></script>
+</body>
+</html>

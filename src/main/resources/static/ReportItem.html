@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Item | Lost & Found</title>
+    <link rel="stylesheet" href="./css/ReportItem.css"> 
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>LOSTLINK</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">Report Items</li>
+                <li class="nav-item">Search Items</li>
+                <li class="nav-item">Profile Settings</li>
+                <li class="nav-item">Help Center</li>
+                <li id="logout" class="nav-item">Log Out</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="welcome-section">
+                <p class="page-kicker">CREATE A REPORT</p>
+                <h1>Report Item</h1>
+            </div>
+
+            <div class="report-form">
+                <form id="reportItemForm">
+                    <div class="form-intro">
+                        <span class="step-indicator">1</span>
+                        <div><h2>Item information</h2><p>Fields marked with * are required.</p></div>
+                    </div>
+                    <div class="form-grid">
+                    <div class="form-group">
+                        <label for="statusSelect">Report Type <span>*</span></label>
+                        <select id="statusSelect" required>
+                            <option value="">Select Type</option>
+                            <option value="lost">Lost Item</option>
+                            <option value="found">Found Item</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemName">Item Name <span>*</span></label>
+                        <input type="text" id="itemName" placeholder="e.g. Black leather wallet" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemTypeSelect">Item Category <span>*</span></label>
+                        <select id="itemTypeSelect" required>
+                            <option value="">Select Category</option>
+                            <option>Electronics</option>
+                            <option>Documents</option>
+                            <option>Clothing</option>
+                            <option>Accessories</option>
+                            <option>Books</option>
+                            <option>Keys</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-wide">
+                        <label for="description">Description <span>*</span></label>
+                        <textarea id="description" placeholder="Describe the item (color, unique features, etc.)"
+                            rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location <span>*</span></label>
+                        <input type="text" id="location" placeholder="Where was it lost/found?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date Lost / Found</label>
+                        <input type="date" id="date">
+                    </div>
+
+                    <div class="form-group form-group-wide upload-group">
+                        <label for="itemImage">Upload Image (Optional)</label>
+                        <input type="file" id="itemImage" accept="image/*">
+                        <small id="image-file-name">PNG, JPG, or JPEG accepted.</small>
+                    </div>
+                    </div>
+
+                    <button type="submit" class="action-btn"><span>Submit Report</span><span aria-hidden="true">&rarr;</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/report.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Items | Lost & Found</title>
+    <link rel="stylesheet" href="./css/SearchItem.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>LOSTLINK</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">Report Items</li>
+                <li class="nav-item">Search Items</li>
+                <li class="nav-item">Profile Settings</li>
+                <li class="nav-item">Help Center</li>
+                <li id="logout" class="nav-item">Log Out</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="welcome-section">
+                <h1>Search Items</h1>
+            </div>
+
+            <div class="search-filters">
+                <input type="text" id="searchInput" placeholder="Search by item name">
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option>Electronics</option>
+                        <option>Documents</option>
+                        <option>Clothing</option>
+                        <option>Accessories</option>
+                        <option>Books</option>
+                        <option>Keys</option>
+                        <option>Other</option>
+                    </select>
+                    <select id="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option>Lost</option>
+                        <option>Found</option>
+                    </select>
+                    <input type="date" id="dateFilter">
+                    <button id="filterBtn" class="action-btn">Apply Filters</button>
+                    <button id="clearFiltersBtn" class="action-btn">Clear Filters</button>
+                </div>
+            </div>
+
+            <div class="search-results">
+                <div class="search-table-wrapper">
+                <table class="search-items-table">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                            <th>Date Reported</th>
+                            <th><span class="sr-only">Open item</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchTableBody">
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+</html>
